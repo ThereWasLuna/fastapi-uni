@@ -42,7 +42,8 @@ class Student(Base):
     courses: Mapped[list["Course"]] = relationship(
         "Course",
         secondary=student_course_association,
-        back_populates="students"
+        back_populates="students",
+        cascade="all"
     )
 
 
@@ -63,7 +64,8 @@ class Head(Base):
     courses: Mapped[list["Course"]] = relationship(
         "Course",
         secondary=head_course_association,
-        back_populates="heads"
+        back_populates="heads",
+        cascade="all"
     )
 
 
@@ -76,10 +78,12 @@ class Course(Base):
     students: Mapped[list["Student"]] = relationship(
         "Student",
         secondary=student_course_association,
-        back_populates="courses"
+        back_populates="courses",
+        cascade="all"
     )
     heads: Mapped[list["Head"]] = relationship(
         "Head",
         secondary=head_course_association,
-        back_populates="courses"
+        back_populates="courses",
+        cascade="all"
     )

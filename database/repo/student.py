@@ -87,7 +87,7 @@ async def remove_student_course(stid, cid):
         student = (session.scalars(student_query)).one()
         course_query = select(Course).where(Course.cid == cid)
         course = (session.scalars(course_query)).one()
-        student.courses.remove(course)
+        # student.courses.remove(course)
         session.commit()
     except BaseException as e:
         print(e)

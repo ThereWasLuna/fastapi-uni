@@ -84,7 +84,7 @@ async def remove_head_course(lid, cid):
         head = (session.scalars(head_query)).one()
         course_query = select(Course).where(Course.cid == cid)
         course = (session.scalars(course_query)).one()
-        head.courses.remove(course)
+        # head.courses.remove(course)
         session.commit()
     except BaseException as e:
         return (False, ["استاد یا درسی با این شماره وجود ندارد"])
