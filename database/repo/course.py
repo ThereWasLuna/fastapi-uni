@@ -40,7 +40,7 @@ async def replace_course(course):
     except BaseException as e:
         return (False, {} , ["استاد با این شماره وجود ندارد"])
     else:
-        return (True, student, [])
+        return (True, course, [])
     finally:
         session.close()
 
