@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from database.schema import Course as Course_db
 
+# test
+
 class Course(BaseModel):
     cid:str
     name:str
