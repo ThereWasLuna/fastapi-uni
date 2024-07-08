@@ -44,31 +44,6 @@
    http://127.0.0.1:8000
    ```
 
-## ساختار پروژه
-
-```
-fastapi-uni/
-│
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── crud.py
-│   ├── database.py
-│   ├── routers/
-│   │   ├── __init__.py
-│   │   ├── student.py
-│   │   ├── course.py
-│   │   ├── enrollment.py
-│   └── tests/
-│       ├── __init__.py
-│       ├── test_main.py
-│
-├── requirements.txt
-└── README.md
-```
-
 ### توضیحات فایل‌ها
 
 #### `main.py`
